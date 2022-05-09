@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1> Upload Image</h1>
+    <form method="post" enctype="multipart/form-data" action="predection\">
+        {% csrf_token %}
+         Upload Image Here :  <input type="file" name="filePath">
+        <br> <br> <br>
+        <input type="submit" value="Click For Prediction">
+
+    </form>
+        <h2>The classification of the image is {{predictedLabel}}</h2>
+        <img src={{filepathName}} alt="imagename">
+        {{filepathName}}
+</body>
+</html>
